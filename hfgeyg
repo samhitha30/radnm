@@ -1,0 +1,98 @@
+android update sdk --all --no-ui --filter platform-tools,tools,build-tools-23.0.2,android-23,extra-android-support,extra-android-m2repository,extra-google-m2repository
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+npm install -g cordova ionic
+
+https://docs.docker.com/engine/installation/linux/ubuntulinux/
+http://gonehybrid.com/build-your-first-mobile-app-with-ionic-2-angular-2/
+https://blogs.infosupport.com/deploying-java-applications-with-docker/
+
+RUN apt-get install oracle-java7-installer -y     && \
+    oracle-java7-set-default
+http://stackoverflow.com/questions/4681697/is-there-a-way-to-automate-the-android-sdk-installation/4682241#4682241
+
+docker run -it --rm --name ionic-framework -p 8100:8100 -p 35729:35729 ionic_app_with_apk	
+docker run -it -d -p 8091:8091 -v /home/ec2-user/vol:/opt/couchbase/var n_couch 
+
+docker ps -a -f status=exited | grep -v '\-volume *$'| awk '{if(NR>1) print $1}' | xargs -r docker rm
+docker commit -p 
+
+ram size -->free -mgt
+rom/harddisk siz--> df -sSh
+
+curl -u "ddgsa:2345ssfpwd" --data '{"title":"test-key","key":"'"$(cat ~/.ssh/id_rsa.pub)"'"}' https://api.github.com/8947292/keys
+sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/default/some-file
+
+sudo chmod g+rwx "/root/.kube/config" -R
+
+chmod 777 .kube/
+
+location /paymentmethodsms {
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    proxy_pass http://paymentmethodsms:8080;
+}
+
+
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AddPerm",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::test3sam/*"
+		}
+	]
+}
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::testsamh/*"
+        },
+        {
+            "Sid": "IPAllow",
+            "Effect": "Deny",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::testsamh/*",
+            "Condition": {
+                "NotIpAddress": {
+                    "aws:SourceIp": "*.*.*.*/32"
+                }
+            }
+        }
+    ]
+}
+
+
+
+
+Mounting s3 on ec2
+one type:-
+https://forums.aws.amazon.com/thread.jspa?messageID=475840
+second type:-
+http://sharadchhetri.com/2013/03/08/how-to-mount-s3-bucket-in-linux-ec2-instance/
+curl usage:-
+http://www.slashroot.in/curl-command-tutorial-linux-example-usage
+
+
+0 – no permission
+1 – execute
+2 – write
+3 – write and execute
+4 – read
+5 – read and execute
+6 – read and write
+7 – read, write, and execute
